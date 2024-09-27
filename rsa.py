@@ -14,7 +14,7 @@ def prime_generator(x):
     return primes
 
 primes = [i for i in prime_generator(200) if i >= 100]
-
+print(prime_generator(200))
 # Выбор случайных простых чисел p и q
 p = random.choice(primes)
 q = random.choice(primes)
@@ -40,7 +40,7 @@ public_key, private_key = [e, n], [d, n] # Публичный и приватн�
 print("Публичный ключ:", public_key, "\nПриватный ключ:", private_key)
 
 # Шифрование сообщения
-message = 15
+message = int(input('Введите_сообщение:'))
 m = pow(message, d) % n
 print("Исходное сообщение:", message)
 print("Шифрованное сообщение:", m)
